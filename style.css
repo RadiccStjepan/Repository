@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+section{
+    width: 70%;
+float:left;
+padding: 10px;
+}
+article{
+    text-align: left;
+    width: 30%;
+    float:left;
+    padding: 10px;
+    
+}
+header{
+    background-color: rgb(30, 58, 82);
+    padding: 45px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    list-style-type: none;
+   
+}
+header a{
+    border-radius:15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+header a:hover{
+
+    background-color: rgb(201, 12, 12);
+    transition: 0.5s ;
+}
+header li{
+    float: left;
+    text-decoration: none;
+    border-radius:35px;
+    display: block;
+}
+header ul{
+    float: right;
+    border-radius:35px;
+    margin: 5px;
+    display: block;
+    overflow: hidden;
+}
+body{
+    color: aliceblue;
+    background-image: url("123.jpg");
+    background-size: 100%;
+    background-color: #cccccc;
+    margin: 0px;
+
+    min-height: 101vh;
+}
+main{
+    margin: 15px ;
+}
+h1{
+    text-align: left;;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(0, 6%, 14%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.navbar a{
+    border-radius:15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    
+}
+
+.navbar a:hover{
+    background-color: rgb(111, 79, 79);
+    transition: 0.5s ;
+    backdrop-filter: overlay(50%);
+}
+.navbar li{
+    float: left;
+    text-decoration: none;
+}
+footer{
+    display: block;
+    clear: both;
+    background-color: rgb(30, 58, 82);
+    padding: 25px;
+    position: sticky;
+    top: 100%;
+    background: transparent;
+    backdrop-filter: blur(15px);
+}
+@media screen and (max-width:600px){
+    section, article{
+        width:100%;
+    }
+}
