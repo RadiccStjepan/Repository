@@ -2,14 +2,17 @@
     box-sizing: border-box;
 }
 section{
-    width: 70%;
+    display:fixed;
+width: 60%;
 float:left;
 padding: 10px;
 }
 article{
+    display:fixed;
+    flex-grow: 1;
     text-align: left;
     width: 30%;
-    float:left;
+    float: right;
     padding: 10px;
     
 }
@@ -29,7 +32,7 @@ header a{
     margin: 0;
     padding: 10px;
     display: block;
-    text-align: center;
+    text-align: left;
 }
 header a:hover{
 
@@ -37,10 +40,12 @@ header a:hover{
     transition: 0.5s ;
 }
 header li{
+    
     float: left;
     text-decoration: none;
     border-radius:35px;
     display: block;
+    z-index: 9999;
 }
 header ul{
     float: right;
@@ -50,35 +55,44 @@ header ul{
     overflow: hidden;
 }
 body{
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
     color: aliceblue;
+    display: flex;
     background-image: url("123.jpg");
     background-size: 100%;
     background-color: #cccccc;
     margin: 0px;
-
-    min-height: 101vh;
+    min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main{
-    margin: 15px ;
+    margin: 30px ;
 }
 h1{
     text-align: left;;
 }
 .navbar ul{
+    display: flex;
+    flex-wrap: nowrap;
     list-style-type: none;
     background-color: hsl(0, 6%, 14%);
-    padding: 0px;
+    padding: 20px;
     margin: 0px;
     overflow: hidden;
     background: transparent;
-    backdrop-filter: blur(10px);
+    
 }
 
 .navbar a{
+    
     border-radius:15px;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    margin: 0;
+    margin: 0px;
     padding: 15px;
     display: block;
     text-align: center;
@@ -91,18 +105,20 @@ h1{
     backdrop-filter: overlay(50%);
 }
 .navbar li{
+    
     float: left;
     text-decoration: none;
 }
 footer{
-    display: block;
+    width: 100%;
+    display: flex;
     clear: both;
     background-color: rgb(30, 58, 82);
     padding: 25px;
     position: sticky;
     top: 100%;
     background: transparent;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(50px);
 }
 @media screen and (max-width:600px){
     section, article{
