@@ -1,21 +1,49 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 *{
     box-sizing: border-box;
 }
+.background_container{
+    background-image: url("XXX");
+   
+  }
 section{
     display:fixed;
 width: 60%;
 float:left;
-padding: 10px;
+padding: 5px;
 }
 article{
     display:fixed;
     flex-grow: 1;
-    text-align: left;
+    
     width: 30%;
     float: right;
     padding: 10px;
     
 }
+.container{
+    display: grid;
+    align-items: left;
+    grid-template-columns: 1fr 1fr ;
+    column-gap: 50 px;
+}
+.text{
+    font-size: 20px;
+    text-align: left;
+}
+.kutija{
+    width: 70%px;
+    border: 3px;
+    border-color: black;
+    background-color:transparent;
+    backdrop-filter: blur(5px);
+    padding:20px;
+    margin: px;
+    
+    
+  }
 header{
     background-color: rgb(30, 58, 82);
     padding: 45px;
@@ -39,6 +67,10 @@ header a:hover{
     background-color: rgb(201, 12, 12);
     transition: 0.5s ;
 }
+h1{
+    font-size: 40px;
+    
+}
 header li{
     
     float: left;
@@ -54,6 +86,11 @@ header ul{
     display: block;
     overflow: hidden;
 }
+
+.font1{
+    font-family: 'Anton', sans-serif;
+
+}
 body{
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
@@ -64,16 +101,16 @@ body{
     background-color: #cccccc;
     margin: 0px;
     min-height: 100vh;
-  background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 main{
     margin: 30px ;
 }
 h1{
-    text-align: left;;
+    text-align: left;
 }
 .navbar ul{
     display: flex;
@@ -86,6 +123,18 @@ h1{
     background: transparent;
     
 }
+.parallax {
+    
+    background-image: url("pozadina.jpg");
+    min-height: 500px;
+    margin-top:  18%;
+    width: 100%;
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 .navbar a{
     
