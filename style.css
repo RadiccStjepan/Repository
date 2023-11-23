@@ -133,11 +133,22 @@ main{
     background: transparent;
     
 }
+
+.prijelaz{
+    border: 10px white;
+    margin-top: 50%;
+    min-height: 200px;
+    width:100%;
+    background:linear-gradient(to bottom,transparent, rgba(50,80,115, 0.3),rgba(50,80,115, 0.2),transparent);
+    display: block;
+    
+
+}
 .parallax {
     
     background-image: url("pozadina.jpg");
     min-height: 500px;
-    margin-top:  40%;
+   
     width: 100%;
   
     background-attachment: fixed;
