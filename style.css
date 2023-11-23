@@ -4,15 +4,20 @@
 *{
     box-sizing: border-box;
 }
-.background_container{
-    background-image: url("XXX");
-   
-  }
-section{
+
+.section1{
     display:fixed;
-width: 60%;
-float:left;
+width: 100%;
+float: left;
 padding: 5px;
+text-align: center;
+}
+section{
+display:fixed;
+width: 70%;
+float: left;
+padding: 5px;
+text-align: left;
 }
 article{
     display:fixed;
@@ -68,8 +73,13 @@ header a:hover{
     transition: 0.5s ;
 }
 h1{
-    font-size: 40px;
+    font-size: 30px;
+    text-align: left;
     
+}
+.h2{
+    font-size: 50px;
+    text-align: center;
 }
 header li{
     
@@ -89,7 +99,9 @@ header ul{
 
 .font1{
     font-family: 'Anton', sans-serif;
-
+text-align: center;
+font-size: 50px;
+padding: 100px;
 }
 body{
     font-family: "Roboto", sans-serif;
@@ -109,9 +121,7 @@ body{
 main{
     margin: 30px ;
 }
-h1{
-    text-align: left;
-}
+
 .navbar ul{
     display: flex;
     flex-wrap: nowrap;
@@ -127,7 +137,7 @@ h1{
     
     background-image: url("pozadina.jpg");
     min-height: 500px;
-    margin-top:  18%;
+    margin-top:  40%;
     width: 100%;
   
     background-attachment: fixed;
