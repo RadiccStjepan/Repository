@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izračunaj godine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        label, input, button {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Izračunaj godine</h2>
+
+    <form id="godineForm">
+        <label for="dan">Unesi dan (01-31):</label>
+        <input type="number" id="dan" name="dan" min="1" max="31" required>
+
+        <label for="mjesec">Unesi mjesec (01-12):</label>
+        <input type="number" id="mjesec" name="mjesec" min="1" max="12" required>
+
+        <label for="godina">Unesi godinu (npr. 1970):</label>
+        <input type="number" id="godina" name="godina" min="1900" required>
+
+        <button type="button" onclick="izracunajGodine()">Izračunaj</button>
+    </form>
+
+    <script>
+        function izracunajGodine() {
+            // Dohvati vrijednosti unesene u polja
+            var dan = parseInt(document.getElementById("dan").value);
+            var mjesec = parseInt(document.getElementById("mjesec").value);
+            var godina = parseInt(document.getElementById("godina").value);
+
+            // Provjeri jesu li uneseni podaci ispravni
+            if (isNaN(dan) || isNaN(mjesec) || isNaN(godina) || dan < 1 || dan > 31 || mjesec < 1 || mjesec > 12 || godina < 1900) {
+                alert("Molimo unesite ispravne podatke.");
+                return;
+            }
+
+            // Izračunaj razliku u godinama
+            var danas = new Date();
+            var rodjendan = new Date(godina, mjesec - 1, dan);
+
+            // Izračunaj razliku u godinama
+            var razlika = danas.getFullYear() - rodjendan.getFullYear();
+
+            // Ako još nije rođendan ove godine, smanji godine za 1
+            if (danas.getMonth() < rodjendan.getMonth() || (danas.getMonth() === rodjendan.getMonth() && danas.getDate() < rodjendan.getDate())) {
+                razlika--;
+            }
+
+            // Prikazi rezultat
+            alert("Imate " + razlika + " godina.");
+        }
+    </script>
+
+</body>
+</html>

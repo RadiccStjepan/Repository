@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Žarulja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #zarulja {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+
+        #prekidacLabel {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Žarulja</h2>
+
+    <img id="zarulja" src="zarulja_off_2.png" alt="Ugašena žarulja">
+
+    <label id="prekidacLabel" for="prekidac">
+        <img src="off-removebg-preview.png" alt="Isključen prekidač">
+    </label>
+    <input type="checkbox" id="prekidac" style="display: none;" onchange="promijeniStanjeZarulje(this.checked)">
+
+    <script>
+        function promijeniStanjeZarulje(paljeno) {
+            var zarulja = document.getElementById("zarulja");
+            var prekidacLabel = document.getElementById("prekidacLabel");
+
+            if (paljeno) {
+                zarulja.src = "zarulja_on_2.png";
+                prekidacLabel.innerHTML = '<img src="on-removebg-preview.png" alt="Uključen prekidač">';
+            } else {
+                zarulja.src = "zarulja_off_2.png";
+                prekidacLabel.innerHTML = '<img src="off-removebg-preview.png" alt="Isključen prekidač">';
+            }
+        }
+    </script>
+
+</body>
+</html>

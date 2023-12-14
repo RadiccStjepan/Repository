@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aritmetička i Geometrijska sredina</title>
+</head>
+<body>
+
+<script>
+    function izracunajSredine() {
+        var brojeviString = prompt("Unesite brojeve odvojene zarezom:");
+        var brojevi = brojeviString.split(",").map(Number);
+
+        // Aritmetička sredina
+        var aritmetickaSredina = brojevi.reduce(function (sum, broj) {
+            return sum + broj;
+        }, 0) / brojevi.length;
+
+        // Geometrijska sredina
+        var geometrijskaSredina = Math.pow(brojevi.reduce(function (product, broj) {
+            return product * broj;
+        }, 1), 1 / brojevi.length);
+
+        // Ispis rezultata
+        document.getElementById("rezultat").innerHTML =
+            "Aritmetička sredina: " + aritmetickaSredina.toFixed(2) + "<br>" +
+            "Geometrijska sredina: " + geometrijskaSredina.toFixed(2);
+    }
+</script>
+
+<h2>Izračunaj Aritmetičku i Geometrijsku sredinu</h2>
+
+<button onclick="izracunajSredine()">Unesi brojeve</button>
+
+<div id="rezultat"></div>
+
+</body>
+</html>

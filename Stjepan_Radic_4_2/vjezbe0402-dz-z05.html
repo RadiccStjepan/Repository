@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacija Registarske Oznake</title>
+</head>
+<body>
+
+<form id="registarskaForma">
+    <label for="registarskaOznaka">Unesite registarsku oznaku (npr. ABC 123): </label>
+    <input type="text" id="registarskaOznaka" name="registarskaOznaka">
+    <button type="button" onclick="validirajRegistarskuOznaku()">Validiraj</button>
+</form>
+
+<script>
+    function validirajRegistarskuOznaku() {
+        var registarskaOznakaInput = document.getElementById("registarskaOznaka").value;
+        
+        // Regularni izraz za validaciju registarske oznake
+        var regex = /^[A-ZČĆŠĐŽ]{2}\s\d{3}\s[A-ZČĆŠĐŽ\d]{2}$/;
+
+        if (regex.test(registarskaOznakaInput)) {
+            alert("Ispravna registarska oznaka!");
+            return true;
+        } else {
+            alert("Neispravna registarska oznaka. Unesite u formatu XX 123 XX.");
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promijeni Pozadinu</title>
+</head>
+<body>
+
+<button onclick="promijeniPozadinu()">Promijeni pozadinu</button>
+
+<p id="trenutnaBoja">Trenutna boja: #FFFFFF</p>
+
+<script>
+    function generirajSlucajnuBoju() {
+        var boja = '#';
+        var karakteri = '0123456789ABCDEF';
+
+        for (var i = 0; i < 6; i++) {
+            boja += karakteri[Math.floor(Math.random() * 16)];
+        }
+
+        return boja;
+    }
+
+    function promijeniPozadinu() {
+        var novaBoja = generirajSlucajnuBoju();
+
+        document.body.style.backgroundColor = novaBoja;
+        document.getElementById("trenutnaBoja").innerHTML = "Trenutna boja: " + novaBoja;
+    }
+</script>
+
+</body>
+</html>

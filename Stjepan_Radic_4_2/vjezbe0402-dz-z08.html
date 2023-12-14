@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-line Kalkulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input, button {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>On-line Kalkulator</h2>
+
+    <label for="operand1">Unesi operand1:</label>
+    <input type="text" id="operand1" name="operand1" required>
+
+    <label for="operand2">Unesi operand2:</label>
+    <input type="text" id="operand2" name="operand2" required>
+
+    <br>
+
+    <button onclick="zbroji()">+</button>
+    <button onclick="oduzmi()">-</button>
+    <button onclick="pomnozi()">*</button>
+    <button onclick="podijeli()">/</button>
+    <button onclick="sinus()">Sin</button>
+    <button onclick="kosinus()">cos</button>
+    <button onclick="tanges()">Tan</button>
+    <button onclick="logaritam()">Ln</button>
+    <button onclick="logaritam10()">Log</button>
+    <button onclick="kvadriranje()">^2</button>
+    <button onclick="kubiranje()">^3</button>
+    <button onclick="potenciranje()">^n</button>
+
+    <script>
+        function zbroji() {
+            prikaziRezultat(parseFloat(document.getElementById("operand1").value) + parseFloat(document.getElementById("operand2").value));
+        }
+
+        function oduzmi() {
+            prikaziRezultat(parseFloat(document.getElementById("operand1").value) - parseFloat(document.getElementById("operand2").value));
+        }
+
+        function pomnozi() {
+            prikaziRezultat(parseFloat(document.getElementById("operand1").value) * parseFloat(document.getElementById("operand2").value));
+        }
+
+        function podijeli() {
+            prikaziRezultat(parseFloat(document.getElementById("operand1").value) / parseFloat(document.getElementById("operand2").value));
+        }
+
+        function sinus() {
+            prikaziRezultat(Math.sin(parseFloat(document.getElementById("operand1").value)));
+        }
+
+        function kosinus() {
+            prikaziRezultat(Math.cos(parseFloat(document.getElementById("operand1").value)));
+        }
+
+        function tanges() {
+            prikaziRezultat(Math.tan(parseFloat(document.getElementById("operand1").value)));
+        }
+
+        function logaritam() {
+            prikaziRezultat(Math.log(parseFloat(document.getElementById("operand1").value)));
+        }
+
+        function logaritam10() {
+            prikaziRezultat(Math.log10(parseFloat(document.getElementById("operand1").value)));
+        }
+
+        function kvadriranje() {
+            prikaziRezultat(Math.pow(parseFloat(document.getElementById("operand1").value), 2));
+        }
+
+        function kubiranje() {
+            prikaziRezultat(Math.pow(parseFloat(document.getElementById("operand1").value), 3));
+        }
+
+        function potenciranje() {
+            prikaziRezultat(Math.pow(parseFloat(document.getElementById("operand1").value), parseFloat(document.getElementById("operand2").value)));
+        }
+
+        function prikaziRezultat(rezultat) {
+            alert("Rezultat operacije: " + rezultat);
+        }
+    </script>
+
+</body>
+</html>
